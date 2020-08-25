@@ -1,0 +1,251 @@
+.header
+  background-color: #fff
+  left: 0
+  position: fixed
+  right: 0
+  z-index: 10
+
+  &__top
+    border-bottom: 1px solid #DADADA
+
+  &__top-inner
+    align-items: center
+    display: flex
+    margin-left: auto
+    margin-right: auto
+    padding: 15px
+    max-width: 1440px
+
+    @media(min-width: 1200px)
+      padding-left: 40px
+      padding-right: 40px
+
+  &__logo
+    width: 140px
+
+    @media(min-width: 1200px)
+      width: 184px
+
+  &__search-bar
+    margin-left: 120px
+
+  &__links
+    color: #616567
+    margin-left: auto
+    margin-right: 80px
+
+    a
+      color: #616567
+      text-decoration: none
+
+      &:hover,
+      &:focus
+        color: $main-color
+
+  &__contacts
+    line-height: 1
+
+    p
+      margin-bottom: 0
+
+    a
+      color: #090909
+      text-decoration: none
+
+      &:hover,
+      &:focus
+        color: $main-color
+
+  &__phone
+    font-weight: 500
+
+  &__email
+    font-size: 14px
+
+  &__bottom
+    border-bottom: 1px solid #DADADA
+    position: relative
+
+  &__bottom-inner
+    align-items: center
+    display: flex
+    margin-left: auto
+    margin-right: auto
+    padding-left: 40px
+    padding-right: 40px
+    max-width: 1440px
+
+  &__menu
+    margin-left: 70px
+
+  &__menu-list
+    align-items: center
+    display: flex
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__menu-item
+    margin-bottom: 0
+
+    &:not(:last-child)
+      margin-right: 35px
+
+  &__menu-link
+    color: #000
+    display: block
+    line-height: 1
+    padding-top: 22px
+    padding-bottom: 22px
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      color: $main-color
+
+  &__compare-link
+    align-items: center
+    color: #000
+    display: flex
+    line-height: 1
+    margin-left: auto
+    margin-right: 110px
+    padding-top: 22px
+    padding-bottom: 22px
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      color: $main-color
+
+  &__compare-link-icon
+    fill: $main-color
+    height: 12px
+    margin-right: 11px
+    margin-bottom: 2px
+    width: 18px
+
+  &__dropdown
+    background-color: #fff
+    display: none
+    left: 0
+    margin-top: 1px
+    padding-top: 55px
+    padding-bottom: 140px
+    position: absolute
+    top: 100%
+    width: 100%
+    z-index: 1
+
+    &.is-open
+      display: block
+
+  &__dropdown-inner
+    margin-left: auto
+    margin-right: auto
+    max-width: 1170px
+    padding-left: 10px
+    padding-right: 10px
+    position: relative
+
+    @media(min-width: 1200px)
+      padding-left: 15px
+      padding-right: 15px
+
+  &__dropdown-title
+    font-size: 32px
+    font-weight: 700
+    line-height: 1
+    margin-bottom: 45px
+
+  &__dropdown-close
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    justify-content: center
+    height: 30px
+    left: auto
+    padding: 0
+    position: absolute
+    right: 15px
+    top: 0
+    width: 30px
+    z-index: 1
+
+  &__dropdown-close-icon
+    fill: #9C9FA0
+    height: 24px
+    width: 24px
+
+  &__dropdown-columns
+    display: flex
+
+  &__dropdown-column
+    padding-right: 15px
+    width: 25%
+
+.header-menu
+  line-height: 1.125
+  list-style: none
+  padding: 0
+
+  &:not(:last-child)
+    margin-bottom: 55px
+
+  &__item
+    &:not(:last-child)
+      margin-bottom: 15px
+
+    &--title
+      font-size: 20px
+      font-weight: 700
+      line-height: 1
+
+      &:not(:last-child)
+        margin-bottom: 22px
+
+      .header-menu__link
+        color: #000
+
+  &__link
+    color: #515151
+    display: inline-block
+    text-decoration: none
+    vertical-align: top
+
+    &:hover,
+    &:focus
+      color: $main-color
+
+.menu-opener
+  align-items: center
+  background-color: transparent
+  border: none
+  color: #000
+  cursor: pointer
+  display: flex
+  font-weight: 700
+  line-height: 1
+  padding: 22px 0
+  transition: color 0.3s
+
+  &:not(:first-child)
+    margin-left: 35px
+
+  &.is-active,
+  &:hover,
+  &:focus
+    color: $main-color
+
+    .menu-opener__icon
+      fill: $main-color
+
+  &__icon
+    fill: #000
+    height: 14px
+    margin-right: 9px
+    margin-bottom: 2px
+    transition: fill 0.3s
+    width: 14px

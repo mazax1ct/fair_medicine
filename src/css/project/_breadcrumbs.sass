@@ -1,0 +1,24 @@
+.breadcrumbs
+  color: #748B9B
+  display: flex
+  font-size: 14px
+  flex-wrap: wrap
+  line-height: 1.3
+  list-style: none
+  margin-top: 70px
+  margin-bottom: 35px
+  padding: 0
+
+  &__item
+    &::after
+      content: '/'
+      margin-left: 10px
+      margin-right: 10px
+
+  &__link
+    color: #748B9B
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      color: $main-color

@@ -1,0 +1,111 @@
+.footer
+  flex-shrink: 0
+
+  &__menu-block
+    background-color: $bg-color
+    padding-top: 95px
+    padding-bottom: 130px
+
+  &__menu-title
+    font-size: 32px
+    line-height: 1
+    margin-bottom: 45px
+
+  &__menu-columns
+    display: flex
+
+  &__menu-column
+    padding-right: 15px
+    width: 25%
+
+  &__menu-section
+    line-height: 1.125
+    list-style: none
+    padding: 0
+
+    &:not(:last-child)
+      margin-bottom: 55px
+
+  &__menu-item
+    &:not(:last-child)
+      margin-bottom: 15px
+
+    &--title
+      font-size: 20px
+      font-weight: 700
+      line-height: 1
+
+      &:not(:last-child)
+        margin-bottom: 22px
+
+      .footer__menu-link
+        color: #000
+
+  &__menu-link
+    color: #515151
+    display: inline-block
+    text-decoration: none
+    vertical-align: top
+
+    &:hover,
+    &:focus
+      color: $main-color
+
+  &__inner
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin-left: auto
+    margin-right: auto
+    padding: 45px 15px
+    max-width: 1440px
+
+    @media(min-width: 1200px)
+      padding-left: 40px
+      padding-right: 40px
+
+  &__logo
+    width: 140px
+
+    @media(min-width: 1200px)
+      width: 184px
+
+  &__service-menu
+
+  &__service-menu-list
+    display: flex
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__service-menu-item
+    &:not(:last-child)
+      margin-right: 45px
+
+  &__service-menu-link
+    color: #616567
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      color: $main-color
+
+  &__contacts
+    line-height: 1
+
+    p
+      margin-bottom: 0
+
+    a
+      color: #090909
+      text-decoration: none
+
+      &:hover,
+      &:focus
+        color: $main-color
+
+  &__phone
+    font-weight: 500
+
+  &__email
+    font-size: 14px
