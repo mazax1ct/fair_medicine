@@ -16,7 +16,15 @@ body
   min-width: 320px
   overflow-wrap: break-word
 
+  &.mobile-menu-open
+    overflow: hidden
+
   &.menu-open
+    overflow-y: hidden
+
+    @media(min-width: 768px)
+      overflow-y: auto
+
     &::after
       background-color: rgba(#000, 0.5)
       content: ''
@@ -30,7 +38,10 @@ body
 .page-content
   flex: 1 0 auto
   padding-top: 132px
-  padding-bottom: 190px
+  padding-bottom: 60px
+
+  @media(min-width: 1200px)
+    padding-bottom: 190px
 
 .container
   margin-left: auto
@@ -39,7 +50,7 @@ body
   padding-left: 10px
   padding-right: 10px
 
-  @media(min-width: 1200px)
+  @media(min-width: 1024px)
     padding-left: 15px
     padding-right: 15px
 

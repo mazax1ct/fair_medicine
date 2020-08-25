@@ -1,75 +1,55 @@
 .input,
 .textarea
   background-color: #fff
-  border: 1px solid #ceced0
-  border-radius: 5px
-  color: inherit
+  border: 1px solid #D1DCE5
+  color: $text-color
+  font-size: 16px
   width: 100%
 
   &:focus
-    border-color: #303032
-    box-shadow: 0 0 5px 2px #00d123
+    border-color: #000
 
   &.error
-    border-color: #ff0000
+    border-color: $secondary-color
 
     &:focus
-      border-color: #ff0000
-      box-shadow: 0 0 5px 2px #ff0000
+      border-color: $secondary-color
 
   &:disabled
     opacity: 0.5
 
 .input
-  height: 50px
-  line-height: 50px
-  padding: 0 10px
+  border-radius: 50px
+  height: 45px
+  padding: 12px 20px 11px 20px
 
 .textarea
+  border-radius: 20px
   height: 100px
-  padding: 10px
+  padding: 10px 20px
   resize: none
 
 /*placeholder*/
 .input::-webkit-input-placeholder
-  color: #303032
+  color: #636363
   opacity: 1
 
 .input::-moz-placeholder
-  color: #303032
+  color: #636363
   opacity: 1
 
 .input:-ms-input-placeholder
-  color: #303032
+  color: #636363
   opacity: 1
 
 .textarea::-webkit-input-placeholder
-  color: #303032
+  color: #636363
   opacity: 1
 
 .textarea::-moz-placeholder
-  color: #303032
+  color: #636363
   opacity: 1
 
 .textarea:-ms-input-placeholder
-  color: #303032
+  color: #636363
   opacity: 1
-
-/*:focus placeholder*/
-.input:focus::-webkit-input-placeholder
-  opacity: 0
-
-.input:focus::-moz-placeholder
-  opacity: 0
-
-.input:focus:-ms-input-placeholder
-  opacity: 0
-
-.textarea:focus::-webkit-input-placeholder
-  opacity: 0
-
-.textarea:focus::-moz-placeholder
-  opacity: 0
-
-.textarea:focus:-ms-input-placeholder
-  opacity: 0

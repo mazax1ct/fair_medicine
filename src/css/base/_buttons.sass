@@ -1,25 +1,27 @@
 .button
-  background-color: #00c220
+  background-color: $main-color
   border: none
-  border-radius: 5px
+  border-radius: 50px
   color: #fff
   cursor: pointer
   display: inline-block
-  font-family: inherit
-  font-size: inherit
-  line-height: 18px
-  padding: 11px 14px
+  font-family: 'Muller', Arial, sans-serif
+  font-size: 20px
+  font-weight: 500
+  line-height: 20px
+  min-height: 45px
+  padding: 10px 15px
   text-decoration: none
   text-align: center
+  transition: background-color 0.3s
   vertical-align: middle
 
   &:hover,
   &:active
-    background-color: #00d123
+    background-color: darken($main-color, 10%)
     color: #fff
 
   &:focus
-    box-shadow: 0 0 5px 2px #00d123
     outline: 1px dotted #000
 
   &:disabled,
@@ -29,3 +31,7 @@
 
     &:focus
       outline: none
+
+a.button
+  padding-top: 13px
+  padding-bottom: 12px

@@ -3,20 +3,38 @@
 
   &__menu-block
     background-color: $bg-color
-    padding-top: 95px
-    padding-bottom: 130px
+    padding-top: 45px
+    padding-bottom: 45px
+
+    @media(min-width: 1200px)
+      padding-top: 95px
+      padding-bottom: 130px
 
   &__menu-title
-    font-size: 32px
+    font-size: 20px
     line-height: 1
-    margin-bottom: 45px
+    margin-top: 0
+    margin-bottom: 35px
+
+    @media(min-width: 768px)
+      font-size: 32px
+      margin-bottom: 45px
 
   &__menu-columns
     display: flex
+    flex-wrap: wrap
 
   &__menu-column
     padding-right: 15px
-    width: 25%
+
+    &:not(:last-child)
+      margin-bottom: 45px
+
+      @media(min-width: 768px)
+        margin-bottom: 0
+
+    @media(min-width: 768px)
+      width: 25%
 
   &__menu-section
     line-height: 1.125
@@ -24,16 +42,22 @@
     padding: 0
 
     &:not(:last-child)
-      margin-bottom: 55px
+      margin-bottom: 45px
+
+      @media(min-width: 768px)
+        margin-bottom: 55px
 
   &__menu-item
     &:not(:last-child)
       margin-bottom: 15px
 
     &--title
-      font-size: 20px
+      font-size: 18px
       font-weight: 700
       line-height: 1
+
+      @media(min-width: 768px)
+        font-size: 20px
 
       &:not(:last-child)
         margin-bottom: 22px
@@ -52,35 +76,59 @@
       color: $main-color
 
   &__inner
-    align-items: center
-    display: flex
-    justify-content: space-between
     margin-left: auto
     margin-right: auto
-    padding: 45px 15px
+    padding: 25px 15px
     max-width: 1440px
 
+    @media(min-width: 768px)
+      align-items: center
+      display: flex
+      justify-content: space-between
+
     @media(min-width: 1200px)
+      padding-top: 45px
+      padding-bottom: 45px
       padding-left: 40px
       padding-right: 40px
 
   &__logo
+    margin-bottom: 30px
     width: 140px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
 
     @media(min-width: 1200px)
       width: 184px
 
+  &__search-bar
+    display: none
+
+    @media(min-width: 1024px)
+      display: block
+
   &__service-menu
+    margin-bottom: 15px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
 
   &__service-menu-list
-    display: flex
     list-style: none
     margin: 0
     padding: 0
 
+    @media(min-width: 768px)
+      display: flex
+
   &__service-menu-item
     &:not(:last-child)
-      margin-right: 45px
+      margin-bottom: 15px
+
+      @media(min-width: 768px)
+        margin-bottom: 0
+        margin-right: 45px
 
   &__service-menu-link
     color: #616567
@@ -94,7 +142,10 @@
     line-height: 1
 
     p
-      margin-bottom: 0
+      margin-bottom: 15px
+
+      @media(min-width: 768px)
+        margin-bottom: 0
 
     a
       color: #090909
