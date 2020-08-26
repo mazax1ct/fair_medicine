@@ -11,7 +11,62 @@
     </label>
     <button class="button" type="submit">Войти</button>
   </form>
-  <p class="popup__text"><a href="#">Забыли пароль?</a></p>
-  <p class="popup__text">Еще нет аккаунта? <a href="#"><b>Зарегистрируйтесь</b></a></p>
+  <p class="popup__text"><a href="javascript:void(0)" data-fancybox="forget_1" data-src="#forget">Забыли пароль?</a></p>
+  <p class="popup__text">Еще нет аккаунта? <a href="javascript:void(0)" data-fancybox="register_1" data-src="#register"><b>Зарегистрируйтесь</b></a></p>
   <p class="popup__terms text-center">Регистрируясь, вы соглашаетесь с <a href="#" target="_blank">политикой обработки персональных данных</a>.</p>
+</div>
+
+<div id="register" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+  <p class="popup__title">Чтобы задать вопрос, <br> войдите или зарегистрируйтесь</p>
+  <p class="popup__sub-title">Укажите электронную почту и пароль</p>
+  <form action="">
+    <label class="form-label">
+      <input class="input" type="text" value="" placeholder="Электронная почта"/>
+    </label>
+    <label class="form-label">
+      <input class="input" type="password" value="" placeholder="Пароль"/>
+    </label>
+    <button class="button" type="submit">Зарегистрироваться</button>
+  </form>
+  <p class="popup__text"><a href="javascript:void(0)" data-fancybox="forget_2" data-src="#forget">Забыли пароль?</a></p>
+  <p class="popup__text">Уже есть аккаунт? <a href="javascript:void(0)" data-fancybox="enter_1" data-src="#enter"><b>Войдите</b></a></p>
+  <p class="popup__terms text-center">Регистрируясь, вы соглашаетесь с <a href="#" target="_blank">политикой обработки персональных данных</a>.</p>
+</div>
+
+<div id="ask" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+  <p class="popup__title">Задайте вопрос</p>
+  <form action="">
+    <label class="form-label">
+      <textarea class="textarea" placeholder="Ваше сообщение"></textarea>
+    </label>
+    <button class="button" type="submit" data-fancybox="send" data-src="#answer">Отправить</button>
+  </form>
+  <p class="popup__terms text-center">Регистрируясь, вы соглашаетесь с <a href="#" target="_blank">политикой обработки персональных данных</a>.</p>
+</div>
+
+<div id="answer" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+  <p class="popup__title">Спасибо!<br> Скоро мы ответим</p>
+</div>
+
+<div id="forget" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+  <p class="popup__title">Восстановление пароля</p>
+  <p class="popup__sub-title">Укажите электронную почту</p>
+  <form action="">
+    <label class="form-label">
+      <input class="input" type="text" value="" placeholder="Электронная почта"/>
+    </label>
+    <button class="button" type="submit">Отправить</button>
+  </form>
+</div>
+
+<div id="compare-popup" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+  <p class="popup__title">Списки сравнений</p>
+  <p class="compare-list"><a href="#">Компьютерные томографы (6)</a> <button class="compare-list__delete" type="button" title="Удалить"><svg class="compare-list__delete-icon" aria-hidden="true"><use xlink:href="#delete" /></svg></button></p>
+  <p class="compare-list"><a href="#">Длинное название списка сравнение для проверки (6)</a> <button class="compare-list__delete" type="button" title="Удалить"><svg class="compare-list__delete-icon" aria-hidden="true"><use xlink:href="#delete" /></svg></button></p>
+  <p class="compare-list"><a href="#">Компьютерные томографы (6)</a> <button class="compare-list__delete" type="button" title="Удалить"><svg class="compare-list__delete-icon" aria-hidden="true"><use xlink:href="#delete" /></svg></button></p>
 </div>

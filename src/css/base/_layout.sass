@@ -40,8 +40,11 @@ body
   padding-top: 132px
   padding-bottom: 60px
 
+  @media(min-width: 768px)
+    padding-top: 0
+
   @media(min-width: 1200px)
-    padding-bottom: 190px
+    padding-bottom: 150px
 
 .container
   margin-left: auto
@@ -56,3 +59,48 @@ body
 
 .text-block
   max-width: 750px
+
+.page-columns
+  display: flex
+  margin-left: -10px
+  margin-right: -10px
+
+  &__left-column
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 768px)
+      width: 75%
+
+  &__right-column
+    display: none
+    padding-top: 5px
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 768px)
+      display: block
+      width: 25%
+
+.side-menu
+  list-style: none
+  margin-top: 20px
+  padding: 0
+
+  &__item
+    margin-bottom: 15px
+
+  &__link
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+    &--all
+      color: #515151
+      font-weight: 700
+
+      &:hover,
+      &:focus
+        color: $main-color

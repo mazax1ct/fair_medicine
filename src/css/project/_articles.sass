@@ -1,0 +1,38 @@
+.articles
+  display: flex
+  flex-wrap: wrap
+  margin-left: -10px
+  margin-right: -10px
+  margin-top: 45px
+  max-width: 750px
+
+  &__item
+    margin-bottom: 45px
+    padding-left: 10px
+    padding-right: 10px
+    width: 100%
+
+    @media(min-width: 768px)
+      width: 50%
+
+.article
+  color: #000
+  display: block
+  font-size: 20px
+  font-weight: 700
+  text-decoration: none
+
+  @media(min-width: 768px) and (max-width: 1199px)
+    font-size: 16px
+
+  img
+    display: block
+    width: 100%
+
+  &:hover,
+  &:focus
+    color: $main-color
+
+  &__title
+    display: block
+    margin-top: 15px

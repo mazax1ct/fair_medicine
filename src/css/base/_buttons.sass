@@ -1,16 +1,18 @@
 .button
+  align-items: center
   background-color: $main-color
   border: none
   border-radius: 50px
   color: #fff
   cursor: pointer
-  display: inline-block
+  display: inline-flex
   font-family: 'Muller', Arial, sans-serif
   font-size: 20px
   font-weight: 500
+  justify-content: center
   line-height: 20px
   min-height: 45px
-  padding: 10px 15px
+  padding: 11px 15px 9px
   text-decoration: none
   text-align: center
   transition: background-color 0.3s
@@ -31,6 +33,20 @@
 
     &:focus
       outline: none
+
+  &--type_2
+    border-radius: 5px
+    font-size: 16px
+    min-height: 40px
+    padding-top: 10px
+    padding-bottom: 10px
+
+  &__icon
+    fill: #fff
+    height: 20px
+    margin-right: 10px
+    margin-top: -2px
+    width: 20px
 
 a.button
   padding-top: 13px
