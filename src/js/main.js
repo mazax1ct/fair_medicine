@@ -20,6 +20,12 @@ $(document).ready(function () {
       }
     }
   }
+
+  $('.js-simple-slider').slick({
+    dots: false,
+    prevArrow: '<button class="button-prev" title="Назад"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_prev" /></svg></button>',
+    nextArrow: '<button class="button-next" title="Вперед"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_next" /></svg></button>'
+  });
 });
 
 $(window).resize(function() {

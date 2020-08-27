@@ -1,0 +1,110 @@
+.breadcrumbs + .catalog-section
+  margin-top: -25px
+
+.catalog-section
+  &__title-block
+    align-items: flex-start
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 25px
+
+    h1
+      margin-right: 30px
+
+  &__filters
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 35px
+
+  &__sorting
+    align-items: flex-start
+    display: flex
+    flex-wrap: wrap
+
+    &:not(:last-child)
+      margin-right: 70px
+
+  &__sorting-title
+    color: #000
+    font-weight: 700
+    margin-right: 15px
+    margin-bottom: 15px
+
+  &__sort
+    margin-right: 15px
+    margin-bottom: 15px
+    text-decoration: none
+
+    &.is-active
+      color: #000
+      cursor: default
+
+    &:not(.is-active)
+      &:hover,
+      &:focus
+        text-decoration: underline
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    margin-right: -10px
+    margin-left: -10px
+
+  &__list-item
+    max-width: 290px
+    margin-bottom: 45px
+    padding-left: 10px
+    padding-right: 10px
+    width: 100%
+
+    @media(min-width: 1200px)
+      margin-bottom: 90px
+
+.catalog-element
+  font-size: 16px
+  max-width: 270px
+  position: relative
+
+  @media(min-width: 768px)
+    font-size: 18px
+
+  &__compare
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    top: 0
+    right: 10px
+    width: 40px
+    z-index: 1
+
+  &__compare-icon
+    fill: $main-color
+    height: 12px
+    width: 18px
+
+  &__link
+    display: block
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+      img
+        transform: scale(1.02)
+
+  &__image
+    display: block
+    margin-bottom: 35px
+
+    img
+      transform: scale(1)
+      transition: transform 0.3s
