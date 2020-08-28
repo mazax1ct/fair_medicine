@@ -21,11 +21,44 @@ $(document).ready(function () {
     }
   }
 
-  $('.js-simple-slider').slick({
-    dots: false,
-    prevArrow: '<button class="button-prev" title="Назад"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_prev" /></svg></button>',
-    nextArrow: '<button class="button-next" title="Вперед"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_next" /></svg></button>'
-  });
+  //простой слйдер картинок
+  if ($(".js-simple-slider").length) {
+    $('.js-simple-slider').slick({
+      dots: false,
+      prevArrow: '<button class="button-prev" title="Назад"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_prev" /></svg></button>',
+      nextArrow: '<button class="button-next" title="Вперед"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_next" /></svg></button>'
+    });
+  }
+
+  //картинки в деталке каталога
+  if ($(".js-catalog-detail-slider").length) {
+    $('.js-catalog-detail-slider').slick({
+      dots: false,
+      arrows: false
+    });
+
+    if($('.catalog-detail__thumb').length < 5) {
+      $('.js-catalog-detail-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        $('.catalog-detail__thumb').removeClass('slick-current');
+        $('.catalog-detail__thumb').eq(nextSlide).addClass('slick-current');
+      });
+    }
+
+    if($('.catalog-detail__thumb').length > 4) {
+      $('.js-catalog-detail-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        $('.js-catalog-detail-thumbs').slick('slickGoTo', nextSlide);
+      });
+
+      $('.js-catalog-detail-thumbs').slick({
+        asNavFor: '.js-catalog-detail-slider',
+        dots: false,
+        arrows: false,
+        slidesToShow: 4,
+        focusOnSelect: true,
+        variableWidth: true
+      });
+    }
+  }
 });
 
 $(window).resize(function() {
@@ -66,6 +99,18 @@ $(window).on("orientationchange", function(event) {
       if ($('.js-content-with-sticky').html().trim() === '') {
         $(".js-sticky-block").trigger("sticky_kit:detach");
       }
+    }
+  }
+
+  if ($(".js-catalog-detail-slider").length) {
+    setTimeout(function() {
+      $('.js-catalog-detail-slider').slick('setPosition');
+    }, 100);
+    
+    if($('.catalog-detail__thumb').length > 4) {
+      setTimeout(function() {
+        $('.js-catalog-detail-thumbs').slick('setPosition');
+      }, 100);
     }
   }
 });
@@ -135,6 +180,7 @@ function closeCatalog(evt) {
 	}
 }
 
+//попапы
 $(document).on('click', '[data-fancybox]', function () {
   $.fancybox.destroy();
   var src= $(this).attr('data-src');
@@ -154,5 +200,26 @@ $(document).on('click', '[data-fancybox]', function () {
 //закрытие попапа
 $(document).on('click', '.js-popup-close', function () {
   $.fancybox.close();
+  return false;
+});
+
+//показать/скрыть детальные характеристики на деталке
+$(document).on('click', '.js-description-toggler', function () {
+  if(!$(this).hasClass('is-open')) {
+    $(this).text('Скрыть детальные характеристики');
+    $(this).next('.catalog-detail__detail').slideDown();
+    $(this).addClass('is-open');
+  } else {
+    $(this).text('Показать детальные характеристики');
+    $(this).next('.catalog-detail__detail').slideUp();
+    $(this).removeClass('is-open');
+  }
+  return false;
+});
+
+//аккордеон
+$(document).on('click', '.js-accordion-toggler', function () {
+  $(this).toggleClass('is-active');
+  $(this).closest('.accordion').find('.accordion__body').slideToggle();
   return false;
 });
