@@ -1,0 +1,174 @@
+.compare-lists
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  margin-bottom: 0
+  padding: 0
+
+  &__item
+    margin-right: 20px
+    margin-bottom: 10px
+
+  &__link
+    border: 1px solid #DADADA
+    border-radius: 5px
+    color: #576065
+    display: inline-block
+    font-size: 16px
+    padding: 3px 15px 2px
+    text-decoration: none
+    transition: all 0.3s
+
+    span
+      color: #B2B2B2
+
+    &:hover,
+    &:focus
+      background-color: rgba(#DADADA, 0.5)
+
+    &.is-active
+      background-color: #DFDFDF
+      color: #000
+
+      span
+        color: #7E7E7E
+
+.compare-top
+  border-top: 1px solid #E5E5E5
+  margin-top: 50px
+  padding-top: 20px
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+
+.compare
+  overflow: hidden
+  padding-top: 20px
+
+  &__top
+    min-height: 296px
+    
+    .button-prev
+      display: none
+      left: 40px
+
+    .button-next
+      left: auto
+      right: 40px
+
+    .compare__container
+      &.scrolled
+        background-color: #fff
+        left: 0
+        position: fixed
+        right: 0
+        top: 0
+        z-index: 10
+
+  &__container
+    min-width: 320px
+    padding-right: 10px
+    padding-left: 10px
+    position: relative
+
+    @media(min-width: 1200px)
+      padding-right: 50px
+      padding-left: 50px
+
+    @media(min-width: 1400px)
+      padding-left: 150px
+      padding-right: 150px
+
+    &--type_2
+      padding-top: 50px
+      padding-bottom: 20px
+
+      &:not(:last-child)
+        border-bottom: 1px solid #E5E5E5
+
+  &__container-title
+    color: #5F5F5F
+    font-size: 8px
+    position: absolute
+    top: 20px
+    text-transform: uppercase
+
+    @media(min-width: 1200px)
+      font-size: 12px
+
+  &__container-inner
+    display: inline-flex
+    transition: transform .2s ease-out
+
+  &__item
+    position: relative
+    width: 270px
+    min-width: 270px
+    padding-right: 30px
+    white-space: normal
+    word-wrap: break-word
+    word-break: break-word
+
+  &__item-image
+    padding: 20px
+    margin: 0 20px 0 -20px
+    user-select: none
+
+  &__item-link
+    display: block
+
+  &__item-title
+    display: block
+
+  &__section
+    &:not(:last-child)
+      .compare__section-list
+        @media(min-width: 1200px)
+          margin-bottom: 100px
+
+  &__section-list
+    display: none
+
+    &.is-open
+      display: block
+
+  &__section-title-block
+    border-bottom: 1px solid #E5E5E5
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 1200px)
+      padding-left: 50px
+      padding-right: 50px
+
+    @media(min-width: 1400px)
+      padding-left: 150px
+      padding-right: 150px
+
+  &__section-toggler
+    align-items: center
+    background-color: transparent
+    border: none
+    color: #000
+    cursor: pointer
+    display: flex
+    font-weight: 700
+    padding: 30px 0
+    text-align: left
+
+    @media(min-width: 1200px)
+      font-size: 20px
+
+    &.is-active
+      .compare__section-toggler-icon
+        transform: rotate(180deg)
+
+  &__section-toggler-icon
+    fill: #BCBCBC
+    height: 9px
+    margin-left: 10px
+    width: 15px
+
+  &__no-info
+    color: #818181

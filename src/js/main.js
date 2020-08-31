@@ -248,3 +248,10 @@ $(document).on('click', '.js-accordion-toggler', function () {
   $(this).closest('.accordion').find('.accordion__body').slideToggle();
   return false;
 });
+
+//разделы сравнения
+$(document).on('click', '.js-compare-section-toggler', function () {
+  $(this).toggleClass('is-active');
+  $(this).closest('.compare__section').find('.compare__section-list').toggleClass('is-open');
+  return false;
+});

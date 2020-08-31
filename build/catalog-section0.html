@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Раздел каталога</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#eb5757">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#f1f1f1">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="search" viewBox="0 0 20 19">
+      <path d="M19.3613 16.8797L14.6012 12.5404C15.8251 11.2652 16.4957 9.66068 16.4957 7.99034C16.4957 4.08773 12.8732 0.912598 8.4207 0.912598C3.96821 0.912598 0.345703 4.08773 0.345703 7.99034C0.345703 11.8929 3.96821 15.0681 8.4207 15.0681C10.0922 15.0681 11.6851 14.6262 13.047 13.7873L17.8432 18.1595C18.0436 18.342 18.3133 18.4426 18.6022 18.4426C18.8757 18.4426 19.1352 18.3512 19.3321 18.1851C19.7506 17.8321 19.764 17.2468 19.3613 16.8797ZM8.4207 2.75896C11.7118 2.75896 14.3892 5.1057 14.3892 7.99034C14.3892 10.875 11.7118 13.2217 8.4207 13.2217C5.12961 13.2217 2.45222 10.875 2.45222 7.99034C2.45222 5.1057 5.12961 2.75896 8.4207 2.75896Z"/>
+    </symbol>
+    <symbol id="burger" viewBox="0 0 14 14">
+      <g>
+      	<path d="M1,2h12c0.6,0,1,0.4,1,1l0,0c0,0.6-0.4,1-1,1H1C0.4,4,0,3.6,0,3l0,0C0,2.4,0.4,2,1,2z"/>
+      	<path d="M1,6h12c0.6,0,1,0.4,1,1l0,0c0,0.6-0.4,1-1,1H1C0.4,8,0,7.6,0,7l0,0C0,6.4,0.4,6,1,6z"/>
+      	<path d="M1,10h12c0.6,0,1,0.4,1,1l0,0c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1l0,0C0,10.4,0.4,10,1,10z"/>
+      </g>
+    </symbol>
+    <symbol id="close" viewBox="0 0 14 14">
+      <path d="M2.1,10.5l8.5-8.5c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4l-8.5,8.5c-0.4,0.4-1,0.4-1.4,0l0,0C1.7,11.6,1.7,10.9,2.1,10.5z"/>
+      <path d="M11.9,10.5L3.5,2.1c-0.4-0.4-1-0.4-1.4,0l0,0c-0.4,0.4-0.4,1,0,1.4l8.5,8.5c0.4,0.4,1,0.4,1.4,0l0,0C12.3,11.6,12.3,10.9,11.9,10.5z"/>
+    </symbol>
+    <symbol id="compare" viewBox="0 0 18 12">
+      <rect width="18" height="2" rx="1"/>
+      <rect y="10" width="18" height="2" rx="1"/>
+      <rect y="5" width="10" height="2" rx="1"/>
+      <rect x="12" y="5" width="6" height="2" rx="1"/>
+      <rect x="14" y="9" width="6" height="2" rx="1" transform="rotate(-90 14 9)"/>
+    </symbol>
+    <symbol id="menu-close" viewBox="0 0 24 24">
+      <rect y="21.8994" width="30" height="2" rx="1" transform="rotate(-45 0 21.8994)"/>
+      <rect width="30" height="2" rx="1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 23.3137 21.8994)"/>
+    </symbol>
+    <symbol id="mobile-burger" viewBox="0 0 29 19">
+      <rect width="29" height="3"/>
+      <rect y="8" width="29" height="3"/>
+      <rect y="16" width="29" height="3"/>
+    </symbol>
+    <symbol id="mobile-close" viewBox="0 0 23 23">
+      <rect x="0.186523" y="20.6917" width="29" height="3" transform="rotate(-45 0.186523 20.6917)"/>
+      <rect width="29" height="3" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 22.8145 20.6917)"/>
+    </symbol>
+    <symbol id="popup-close" viewBox="0 0 23 23">
+      <rect y="21.2131" width="30" height="2" rx="1" transform="rotate(-45 0 21.2131)"/>
+      <rect width="30" height="2" rx="1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 22.6274 21.2131)"/>
+    </symbol>
+    <symbol id="chat" viewBox="0 0 20 20">
+      <path d="M13.0153 4.49349C11.8863 2.18804 9.52441 0.663818 6.87514 0.663818C3.08433 0.663818 0.000301026 3.73035 0.000301026 7.4996C0.000301026 8.52395 0.220218 9.50576 0.65427 10.4212L0.0116679 13.6346C-0.070127 14.0436 0.290724 14.4052 0.699855 14.3242L3.95287 13.6811C4.39086 13.8889 4.84398 14.0469 5.30955 14.1557C4.26594 9.21284 8.01257 4.5731 13.0153 4.49349Z"/>
+      <path d="M19.3457 15.4212C19.458 15.1844 19.5556 14.9432 19.6391 14.698H19.6177C21.0805 10.4044 18.0042 5.89189 13.4628 5.67217C13.4628 5.67193 13.4627 5.6717 13.4627 5.67147C9.55508 5.49139 6.30859 8.62007 6.30859 12.4996C6.30859 16.2657 9.3695 19.3298 13.1343 19.3352C14.1555 19.3339 15.1343 19.114 16.0471 18.6811C19.6098 19.3854 19.3319 19.3354 19.4138 19.3354C19.784 19.3354 20.0606 18.9961 19.9883 18.6346L19.3457 15.4212Z"/>
+    </symbol>
+    <symbol id="delete" viewBox="0 0 20 20">
+      <path d="M13.5713 14.2857C13.3885 14.2857 13.2057 14.216 13.0662 14.0764L5.92342 6.93359C5.64434 6.65451 5.64434 6.20254 5.92342 5.92361C6.20235 5.64468 6.65447 5.64453 6.9334 5.92361L14.0762 13.0664C14.3553 13.3455 14.3553 13.7975 14.0762 14.0764C13.9367 14.216 13.7541 14.2857 13.5713 14.2857Z"/>
+      <path d="M6.42834 14.2858C6.24554 14.2858 6.06289 14.2161 5.92342 14.0764C5.64434 13.7975 5.64434 13.3454 5.92342 13.0665L13.0662 5.92367C13.3453 5.64458 13.7973 5.64458 14.0762 5.92367C14.3551 6.2026 14.3553 6.65472 14.0762 6.93365L6.9334 14.0764C6.79394 14.2161 6.61114 14.2858 6.42834 14.2858Z"/>
+      <path d="M10 20C4.48593 20 0 15.5141 0 10C0 4.48593 4.48593 0 10 0C15.5141 0 20 4.48593 20 10C20 15.5141 15.5141 20 10 20ZM10 1.42853C5.27374 1.42853 1.42853 5.27374 1.42853 10C1.42853 14.7263 5.27374 18.5715 10 18.5715C14.7263 18.5715 18.5715 14.7263 18.5715 10C18.5715 5.27374 14.7263 1.42853 10 1.42853Z"/>
+    </symbol>
+    <symbol id="slider_prev" viewBox="0 0 13 24">
+      <path d="M11.4681 23.308C11.9481 23.3089 12.338 22.9203 12.3389 22.4403C12.3393 22.2089 12.2474 21.9868 12.0835 21.8234L2.26514 12.0085L12.0835 2.19373C12.4169 1.84847 12.4074 1.2982 12.0621 0.964673C11.7253 0.63938 11.1913 0.63938 10.8545 0.964673L0.424286 11.3949C0.0849771 11.7343 0.0849771 12.2845 0.424286 12.624L10.8545 23.0542C11.0173 23.2167 11.238 23.308 11.4681 23.308Z"/>
+    </symbol>
+    <symbol id="slider_next" viewBox="0 0 13 24">
+      <path d="M1.5319 23.308C1.05186 23.3089 0.662031 22.9203 0.661134 22.4403C0.660727 22.2089 0.752643 21.9868 0.916512 21.8234L10.7349 12.0085L0.916512 2.19373C0.583071 1.84847 0.592604 1.2982 0.937861 0.964673C1.27472 0.63938 1.8087 0.63938 2.14549 0.964673L12.5757 11.3949C12.915 11.7343 12.915 12.2845 12.5757 12.624L2.14549 23.0542C1.98268 23.2167 1.76201 23.308 1.5319 23.308Z"/>
+    </symbol>
+    <symbol id="list" viewBox="0 0 20 20">
+    	<path d="M16,20H4c-2.2,0-4-1.8-4-4V4c0-2.2,1.8-4,4-4h12c2.2,0,4,1.8,4,4v12C20,18.2,18.2,20,16,20z M4,2C2.9,2,2,2.9,2,4v12c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2H4z"/>
+    	<path d="M5,5h10c0.6,0,1,0.4,1,1l0,0c0,0.6-0.4,1-1,1H5C4.4,7,4,6.6,4,6l0,0C4,5.4,4.4,5,5,5z"/>
+    	<path d="M5,9h10c0.6,0,1,0.4,1,1l0,0c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1l0,0C4,9.4,4.4,9,5,9z"/>
+    	<path d="M5,13h10c0.6,0,1,0.4,1,1l0,0c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1l0,0C4,13.4,4.4,13,5,13z"/>
+    </symbol>
+    <symbol id="arrow_down" viewBox="0 0 15 9">
+      <path d="M7.5,8.8c0.3,0,0.5-0.1,0.7-0.3L14.7,2c0.4-0.4,0.4-1.1,0-1.5c-0.4-0.4-1.1-0.4-1.5,0L7.5,6.2L1.8,0.5c-0.4-0.4-1.1-0.4-1.5,0c-0.4,0.4-0.4,1.1,0,1.5l6.4,6.4C7,8.7,7.2,8.8,7.5,8.8z"/>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="header__top">
+      <div class="header__top-inner">
+        <a class="header__logo" href="main.html"><img src="images/logo.png" alt="Честная Медицина"></a>
+        <div class="header__search-bar">
+          <div class="search-bar">
+            <form action="">
+              <input class="search-bar__input" type="text" name="search" value="" placeholder="Поиск">
+              <button class="search-bar__submit" type="submit" title="Искать"><svg class="search-bar__submit-icon" aria-hidden="true"><use xlink:href="#search" /></svg></button>
+            </form>
+          </div>
+        </div>
+        <div class="header__links">
+          <a href="#" data-fancybox="enter" data-src="#enter">Вход</a> / <a href="#" data-fancybox="register" data-src="#register">регистрация</a>
+        </div>
+        <div class="header__contacts">
+          <p><a class="header__phone" href="tel:88003330733">8 (800) 333-07-33</a></p>
+          <p><a class="header__email" href="mailto:info@secondopinions.ru">info@secondopinions.ru</a></p>
+        </div>
+        <button class="js-mobile-menu-opener header__burger" type="button" title="Открыть меню"><svg class="header__burger-icon" aria-hidden="true"><use xlink:href="#mobile-burger" /></svg></button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__bottom-inner">
+        <button class="js-menu-opener menu-opener" type="button" data-target="catalog"><svg class="menu-opener__icon" aria-hidden="true"><use xlink:href="#burger" /></svg> Каталог</button>
+        <div class="header__dropdown" data-target="catalog">
+          <div class="header__dropdown-inner">
+            <p class="header__dropdown-title">Каталог товаров</p>
+            <button class="js-menu-closer header__dropdown-close" type="button" title="Закрыть"><svg class="header__dropdown-close-icon" aria-hidden="true"><use xlink:href="#menu-close" /></svg></button>
+            <div class="header__dropdown-columns">
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Группа товаров</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Еще одна группа</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Группа товаров</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Еще одна группа</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="js-menu-opener menu-opener" type="button" data-target="materials"><svg class="menu-opener__icon" aria-hidden="true"><use xlink:href="#burger" /></svg> Материалы</button>
+        <div class="header__dropdown" data-target="materials">
+          <div class="header__dropdown-inner">
+            <p class="header__dropdown-title">Материалы</p>
+            <button class="js-menu-closer header__dropdown-close" type="button" title="Закрыть"><svg class="header__dropdown-close-icon" aria-hidden="true"><use xlink:href="#menu-close" /></svg></button>
+            <div class="header__dropdown-columns">
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Группа товаров</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Еще одна группа</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Группа товаров</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+              <div class="header__dropdown-column">
+                <ol class="header-menu">
+                  <li class="header-menu__item header-menu__item--title"><a class="header-menu__link" href="#">Еще одна группа</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Компьютерные томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">И еще томографы</a></li>
+                  <li class="header-menu__item"><a class="header-menu__link" href="#">Другие штуковины</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu">
+          <ol class="header__menu-list">
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Раздел меню</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Еще один раздел</a></li>
+          </ol>
+        </div>
+        <a class="header__compare-link" href="#" data-fancybox="compare" data-src="#compare-popup"><svg class="header__compare-link-icon" aria-hidden="true"><use xlink:href="#compare" /></svg> Списки сравнений</a>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <div class="mobile-menu__inner">
+        <button class="js-mobile-menu-closer mobile-menu__closer" type="button" title="Закрыть меню"><svg class="mobile-menu__closer-icon" aria-hidden="true"><use xlink:href="#mobile-close" /></svg></button>
+        <div class="header__links">
+          <a href="#" data-fancybox="enter" data-src="#enter">Вход</a> / <a href="#" data-fancybox="register" data-src="#register">регистрация</a>
+        </div>
+        <ol class="mobile-menu__list">
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#">Раздел меню</a></li>
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#">Раздел меню</a></li>
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#">Раздел меню</a></li>
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#">Раздел меню</a></li>
+        </ol>
+        <a class="header__compare-link" href="#" data-fancybox="compare" data-src="#compare-popup"><svg class="header__compare-link-icon" aria-hidden="true"><use xlink:href="#compare" /></svg> Списки сравнений</a>
+        <div class="header__contacts">
+          <p><a class="header__phone" href="tel:88003330733">8 (800) 333-07-33</a></p>
+          <p><a class="header__email" href="mailto:info@secondopinions.ru">info@secondopinions.ru</a></p>
+        </div>
+        <div class="search-bar">
+          <form action="">
+            <input class="search-bar__input" type="text" name="search" value="" placeholder="Поиск">
+            <button class="search-bar__submit" type="submit" title="Искать"><svg class="search-bar__submit-icon" aria-hidden="true"><use xlink:href="#search" /></svg></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <div class="container">
+      <div class="page-banner"><img src="images/content/img_3.jpg" alt="alt"></div>
+      <ol class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная страница</a></li>
+        <li class="breadcrumbs__item">Оборудование</li>
+      </ol>
+      <div class="catalog-section">
+        <div class="catalog-section__title-block">
+          <h1>Томографы</h1>
+          <button class="button button--type_2" type="button" data-fancybox="ask_id_1" data-src="#ask"><svg class="button__icon" aria-hidden="true"><use xlink:href="#chat" /></svg>Задать вопрос</button>
+        </div>
+        <div class="catalog-section__filters">
+          <div class="catalog-section__sorting">
+            <p class="catalog-section__sorting-title">Сортировать:</p>
+            <a class="catalog-section__sort is-active" href="#">По популярности</a>
+            <a class="catalog-section__sort" href="#">По новизне</a>
+            <a class="catalog-section__sort" href="#">По рейтингу</a>
+          </div>
+          <div class="catalog-section__sorting">
+            <p class="catalog-section__sorting-title">Срезы:</p>
+            <a class="catalog-section__sort" href="#">16/32</a>
+            <a class="catalog-section__sort" href="#">64</a>
+            <a class="catalog-section__sort is-active" href="#">128 и более</a>
+          </div>
+        </div>
+        <div class="catalog-section__list">
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_4.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>GE Optima CT520 (32 sl)</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_5.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный <br> <b>SOMATOM go.All 32 sl</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_6.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>Incisive CT</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_7.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>Discovery RT</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_4.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>GE Optima CT520 (32 sl)</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_5.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный <br> <b>SOMATOM go.All 32 sl</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_6.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>Incisive CT</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_7.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>Discovery RT</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_4.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>GE Optima CT520 (32 sl)</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_5.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный <br> <b>SOMATOM go.All 32 sl</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_6.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>Incisive CT</b></span>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-section__list-item">
+            <div class="catalog-element">
+              <button class="catalog-element__compare" type="button" title="Добавить в сравнение"><svg class="catalog-element__compare-icon" aria-hidden="true"><use xlink:href="#compare" /></svg></button>
+              <a class="catalog-element__link" href="#">
+                <span class="catalog-element__image"><img src="images/content/img_7.jpg" alt="alt"></span>
+                <span class="catalog-element__title">Томограф компьютерный<br> <b>Discovery RT</b></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="show-more" href="#">Показать ещё</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__menu-block">
+      <div class="container">
+        <h2 class="footer__menu-title">Полезные материалы</h2>
+        <div class="footer__menu-columns">
+          <div class="footer__menu-column">
+            <ol class="footer__menu-section">
+              <li class="footer__menu-item footer__menu-item--title"><a class="footer__menu-link" href="#">Назание раздела</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+            </ol>
+            <ol class="footer__menu-section">
+              <li class="footer__menu-item footer__menu-item--title"><a class="footer__menu-link" href="#">Назание раздела</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+            </ol>
+          </div>
+          <div class="footer__menu-column">
+            <ol class="footer__menu-section">
+              <li class="footer__menu-item footer__menu-item--title"><a class="footer__menu-link" href="#">Назание раздела</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+            </ol>
+          </div>
+          <div class="footer__menu-column">
+            <ol class="footer__menu-section">
+              <li class="footer__menu-item footer__menu-item--title"><a class="footer__menu-link" href="#">Назание раздела</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+            </ol>
+            <ol class="footer__menu-section">
+              <li class="footer__menu-item footer__menu-item--title"><a class="footer__menu-link" href="#">Назание раздела</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+            </ol>
+          </div>
+          <div class="footer__menu-column">
+            <ol class="footer__menu-section">
+              <li class="footer__menu-item footer__menu-item--title"><a class="footer__menu-link" href="#">Назание раздела</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие штуковины</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Компьютерные томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Другие томографы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">И еще томографы</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__inner">
+      <div class="footer__logo"><img src="images/logo.png" alt="Честная Медицина"></div>
+      <div class="footer__search-bar">
+        <div class="search-bar">
+          <form action="">
+            <input class="search-bar__input" type="text" name="search" value="" placeholder="Поиск">
+            <button class="search-bar__submit" type="submit" title="Искать"><svg class="search-bar__submit-icon" aria-hidden="true"><use xlink:href="#search" /></svg></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__service-menu">
+        <ol class="footer__service-menu-list">
+          <li class="footer__service-menu-item"><a class="footer__service-menu-link" href="#">О компании</a></li>
+          <li class="footer__service-menu-item"><a class="footer__service-menu-link" href="#">Контакты</a></li>
+        </ol>
+      </div>
+      <div class="footer__contacts">
+        <p><a class="footer__phone" href="tel:88003330733">8 (800) 333-07-33</a></p>
+        <p><a class="footer__email" href="mailto:info@secondopinions.ru">info@secondopinions.ru</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="enter" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+    <p class="popup__title">Вход</p>
+    <p class="popup__sub-title">Укажите электронную почту и пароль</p>
+    <form action="">
+      <label class="form-label">
+        <input class="input" type="text" value="" placeholder="Электронная почта"/>
+      </label>
+      <label class="form-label">
+        <input class="input" type="password" value="" placeholder="Пароль"/>
+      </label>
+      <button class="button" type="submit">Войти</button>
+    </form>
+    <p class="popup__text"><a href="javascript:void(0)" data-fancybox="forget_1" data-src="#forget">Забыли пароль?</a></p>
+    <p class="popup__text">Еще нет аккаунта? <a href="javascript:void(0)" data-fancybox="register_1" data-src="#register"><b>Зарегистрируйтесь</b></a></p>
+    <p class="popup__terms text-center">Регистрируясь, вы соглашаетесь с <a href="#" target="_blank">политикой обработки персональных данных</a>.</p>
+  </div>
+  
+  <div id="register" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+    <p class="popup__title">Чтобы задать вопрос, <br> войдите или зарегистрируйтесь</p>
+    <p class="popup__sub-title">Укажите электронную почту и пароль</p>
+    <form action="">
+      <label class="form-label">
+        <input class="input" type="text" value="" placeholder="Электронная почта"/>
+      </label>
+      <label class="form-label">
+        <input class="input" type="password" value="" placeholder="Пароль"/>
+      </label>
+      <button class="button" type="submit">Зарегистрироваться</button>
+    </form>
+    <p class="popup__text"><a href="javascript:void(0)" data-fancybox="forget_2" data-src="#forget">Забыли пароль?</a></p>
+    <p class="popup__text">Уже есть аккаунт? <a href="javascript:void(0)" data-fancybox="enter_1" data-src="#enter"><b>Войдите</b></a></p>
+    <p class="popup__terms text-center">Регистрируясь, вы соглашаетесь с <a href="#" target="_blank">политикой обработки персональных данных</a>.</p>
+  </div>
+  
+  <div id="ask" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+    <p class="popup__title">Задайте вопрос</p>
+    <form action="">
+      <label class="form-label">
+        <textarea class="textarea" placeholder="Ваше сообщение"></textarea>
+      </label>
+      <button class="button" type="submit" data-fancybox="send" data-src="#answer">Отправить</button>
+    </form>
+    <p class="popup__terms text-center">Регистрируясь, вы соглашаетесь с <a href="#" target="_blank">политикой обработки персональных данных</a>.</p>
+  </div>
+  
+  <div id="answer" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+    <p class="popup__title">Спасибо!<br> Скоро мы ответим</p>
+  </div>
+  
+  <div id="forget" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+    <p class="popup__title">Восстановление пароля</p>
+    <p class="popup__sub-title">Укажите электронную почту</p>
+    <form action="">
+      <label class="form-label">
+        <input class="input" type="text" value="" placeholder="Электронная почта"/>
+      </label>
+      <button class="button" type="submit">Отправить</button>
+    </form>
+  </div>
+  
+  <div id="compare-popup" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#popup-close" /></svg></button>
+    <p class="popup__title">Списки сравнений</p>
+    <p class="compare-list"><a href="#">Компьютерные томографы (6)</a> <button class="compare-list__delete" type="button" title="Удалить"><svg class="compare-list__delete-icon" aria-hidden="true"><use xlink:href="#delete" /></svg></button></p>
+    <p class="compare-list"><a href="#">Длинное название списка сравнение для проверки (6)</a> <button class="compare-list__delete" type="button" title="Удалить"><svg class="compare-list__delete-icon" aria-hidden="true"><use xlink:href="#delete" /></svg></button></p>
+    <p class="compare-list"><a href="#">Компьютерные томографы (6)</a> <button class="compare-list__delete" type="button" title="Удалить"><svg class="compare-list__delete-icon" aria-hidden="true"><use xlink:href="#delete" /></svg></button></p>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
