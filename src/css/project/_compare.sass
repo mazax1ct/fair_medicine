@@ -35,31 +35,66 @@
 
 .compare-top
   border-top: 1px solid #E5E5E5
-  margin-top: 50px
+  margin-top: 25px
   padding-top: 20px
 
+  @media(min-width: 1200px)
+    margin-top: 50px
+
   &__inner
-    display: flex
-    flex-wrap: wrap
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+
+  &__diff-toggler
+    background-color: transparent
+    border: none
+    color: $main-color
+    cursor: pointer
+    font-weight: 400
+    margin-right: auto
+    margin-bottom: 10px
+    padding: 13px 0
+    text-decoration: underline
+
+  .button
+    font-size: 14px
+    margin-bottom: 10px
+
+    @media(min-width: 1200px)
+      font-size: 16px
+
+    &:not(:last-child)
+      margin-right: 15px
 
 .compare
   overflow: hidden
   padding-top: 20px
 
   &__top
-    min-height: 296px
-    
+    min-height: 171px
+
+    @media(min-width: 768px)
+      min-height: 296px
+
     .button-prev
       display: none
-      left: 40px
+      left: 10px
+
+      @media(min-width: 768px)
+        left: 40px
 
     .button-next
       left: auto
-      right: 40px
+      right: 10px
+
+      @media(min-width: 768px)
+        right: 40px
 
     .compare__container
       &.scrolled
         background-color: #fff
+        box-shadow: 0 0 3px 3px rgba(#000, 0.1)
         left: 0
         position: fixed
         right: 0
@@ -91,8 +126,11 @@
     color: #5F5F5F
     font-size: 8px
     position: absolute
-    top: 20px
+    top: 10px
     text-transform: uppercase
+
+    @media(min-width: 768px)
+      top: 20px
 
     @media(min-width: 1200px)
       font-size: 12px
@@ -115,8 +153,21 @@
     margin: 0 20px 0 -20px
     user-select: none
 
+    &:last-child
+      margin-right: 0
+
+  &__image
+    max-width: 100px
+
+    @media(min-width: 768px)
+      max-width: 100%
+
   &__item-link
     display: block
+
+    &:hover,
+    &:focus
+      text-decoration: underline
 
   &__item-title
     display: block
@@ -125,7 +176,7 @@
     &:not(:last-child)
       .compare__section-list
         @media(min-width: 1200px)
-          margin-bottom: 100px
+          margin-bottom: 50px
 
   &__section-list
     display: none
