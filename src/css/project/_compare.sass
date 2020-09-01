@@ -52,10 +52,13 @@
     color: $main-color
     cursor: pointer
     font-weight: 400
-    margin-right: auto
+    margin-right: 15px
     margin-bottom: 10px
     padding: 13px 0
     text-decoration: underline
+
+    @media(min-width: 768px)
+      margin-right: auto
 
   .button
     font-size: 14px
@@ -171,6 +174,26 @@
 
   &__item-title
     display: block
+
+  &__item-delete
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    justify-content: center
+    height: 40px
+    left: auto
+    position: absolute
+    right: 0
+    top: 0
+    width: 40px
+    z-index: 1
+
+  &__item-delete-icon
+    fill: #7C7C7C
+    height: 20px
+    width: 20px
 
   &__section
     &:not(:last-child)

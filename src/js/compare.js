@@ -49,9 +49,7 @@ $(document).on('click', '.button-next', function () {
     if($('.compare__container-inner').width() + tr + comp <= $('.compare__container').innerWidth()) {
       $('.button-next').css('display', 'none');
     }
-
-    console.log($('.body').width(), $('.compare__container-inner').width(), tr, $('.compare__container').width(), comp);
-
+    
     return false;
   }
 });
