@@ -269,7 +269,13 @@
 
   &__dropdown-columns
     @media(min-width: 768px)
-      display: flex
+      column-count: 4
+      column-width: 270px
+      column-gap: 15px
+      //display: flex
+
+    .header-menu
+      page-break-inside: avoid
 
   &__dropdown-column
     padding-right: 15px
