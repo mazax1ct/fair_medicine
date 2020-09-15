@@ -202,7 +202,7 @@
 
     @media(min-width: 1200px) and (min-height: 900px)
       padding-top: 55px
-      padding-bottom: 140px
+      padding-bottom: 95px
 
     &.is-open
       display: block
@@ -265,10 +265,21 @@
     width: 24px
 
   &__dropdown-columns
-    @media(min-width: 768px)
-      column-count: 4
-      column-width: 270px
-      column-gap: 15px
+    &--less_5
+      @media(min-width: 768px)
+        display: flex
+        flex-wrap: wrap
+
+      .header-menu
+        padding-right: 15px
+        min-width: 270px
+        width: 270px
+
+    &--more_then_4
+      @media(min-width: 768px)
+        column-count: 4
+        column-width: 270px
+        column-gap: 15px
 
     .header-menu
       page-break-inside: avoid
