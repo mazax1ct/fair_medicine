@@ -24,32 +24,34 @@ $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
 var translate = 0;
 
 function next() {
-  return translate -= 270;
+  return translate -= 290;
 }
 
 function prev() {
-  return translate += 270;
+  return translate += 290;
 }
 
 $(document).on('click', '.button-next', function () {
 
-  if($('.compare__container-inner').width() > $('.compare__container').width()) {
+  if($('.compare__container-inner').width() > $('.compare__container').innerWidth()) {
     var tr = next();
     $('.compare__container-inner').css('transform', 'translateX('+ tr +'px)');
     $('.button-prev').css('display', 'flex');
 
-    var comp;
+    var comp = 0;
 
-    if($('body').width() < 1400) {
-      comp = 0;
-    } else {
-      comp = 270;
+    if($('body').width() > 1890) {
+      comp = -290;
     }
 
-    if($('.compare__container-inner').width() + tr + comp <= $('.compare__container').innerWidth()) {
+    var sum = $('.compare__container-inner').width() + tr + comp;
+
+    if(sum <= $('.compare__container').width()) {
       $('.button-next').css('display', 'none');
     }
-    
+
+    console.log(sum, $('.compare__container').width());
+
     return false;
   }
 });

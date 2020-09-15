@@ -21,8 +21,13 @@
       margin-bottom: 45px
 
   &__menu-columns
-    display: flex
-    flex-wrap: wrap
+    @media(min-width: 768px)
+      column-count: 4
+      column-width: 270px
+      column-gap: 15px
+
+    .footer__menu-section
+      page-break-inside: avoid
 
   &__menu-column
     padding-right: 15px
