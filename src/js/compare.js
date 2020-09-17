@@ -17,6 +17,10 @@ $(document).ready(function () {
   resize_scroll();
 
   $('.compare__top').height($('.compare__top .compare__container').height());
+
+  if($('.compare__top .compare__container-inner').width() <= $('.compare__top .compare__container').width()) {
+    $('.button-next').css('display', 'none');
+  }
 });
 
 $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
@@ -32,8 +36,7 @@ function prev() {
 }
 
 $(document).on('click', '.button-next', function () {
-
-  if($('.compare__container-inner').width() > $('.compare__container').innerWidth()) {
+  if($('.compare__container-inner').width() > $('.compare__container').width()) {
     var tr = next();
     $('.compare__container-inner').css('transform', 'translateX('+ tr +'px)');
     $('.button-prev').css('display', 'flex');
@@ -49,8 +52,6 @@ $(document).on('click', '.button-next', function () {
     if(sum <= $('.compare__container').width()) {
       $('.button-next').css('display', 'none');
     }
-
-    console.log(sum, $('.compare__container').width());
 
     return false;
   }
